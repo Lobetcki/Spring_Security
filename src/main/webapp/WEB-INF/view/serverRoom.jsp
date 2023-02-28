@@ -11,6 +11,6 @@
     <title>Server Room</title>
 </head>
 <body>
-    <h1> Information for IT, Security and Director</h1>
+    <h1> Information for IT</h1>
 </body>
 </html>

@@ -17,18 +17,18 @@
     <br>
     <br>
 
-    <security:authorize access="hasRole('IT, Security, Director')">
-    <input type="button" value="For it, security and director"
+    <security:authorize access="hasRole('IT')">
+    <input type="button" value="For IT"
            onclick="window.location.href = 'server_Room'">
-    Only for IT, Security and Director
+    Only for IT
     </security:authorize>
 
     <br>
     <br>
-    <security:authorize access="hasRole('Security, Director')">
-    <input type="button" value="For security and director"
+    <security:authorize access="hasRole('Security')">
+    <input type="button" value="For security"
            onclick="window.location.href = 'security_Room'">
-    Only for Security and Director
+    Only for Security
     </security:authorize>
 
     <br>
