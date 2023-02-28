@@ -7,8 +7,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 
-import static org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.RequestMatchers.antMatchers;
-
 @EnableWebSecurity
 public class SecurityConfigNew extends WebSecurityConfigurerAdapter {
 
@@ -17,9 +15,9 @@ public class SecurityConfigNew extends WebSecurityConfigurerAdapter {
 
         User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
         auth.inMemoryAuthentication()
-                .withUser(userBuilder.username("Vania").password("qwerty").roles("Employee"))
-                .withUser(userBuilder.username("Kolia").password("asdfgh").roles("IT"))
-                .withUser(userBuilder.username("Fedia").password("zxcvbn").roles("Security"))
+                .withUser(userBuilder.username("Vania").password("1").roles("Employee"))
+                .withUser(userBuilder.username("Kolia").password("2").roles("IT"))
+                .withUser(userBuilder.username("Fedia").password("3").roles("Security"))
                 .withUser(userBuilder.username("Petrovich").password("1234").roles("Director"));
     }
 

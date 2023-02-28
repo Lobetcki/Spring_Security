@@ -1,3 +1,4 @@
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: HP
@@ -16,21 +17,27 @@
     <br>
     <br>
 
+    <security:authorize access="hasRole('IT, Security, Director')">
     <input type="button" value="For it, security and director"
            onclick="window.location.href = 'server_Room'">
     Only for IT, Security and Director
+    </security:authorize>
 
     <br>
     <br>
+    <security:authorize access="hasRole('Security, Director')">
     <input type="button" value="For security and director"
            onclick="window.location.href = 'security_Room'">
     Only for Security and Director
+    </security:authorize>
 
     <br>
     <br>
+    <security:authorize access="hasRole('Director')">
     <input type="button" value="For director"
            onclick="window.location.href = 'boss_Office'">
     Only for Director
+    </security:authorize>
 
 </body>
 </html>
